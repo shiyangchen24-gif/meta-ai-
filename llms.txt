@@ -1,0 +1,20 @@
+# 小島家電
+
+> 台灣空氣清淨機品牌與線上商店，提供 4–18 坪適用機種、原廠濾網與實測選購指南。全館免運、30 天鑑賞期。
+
+<!--
+  【GEO】llms.txt 是社群提出的格式，放在網站根目錄，給 AI 一份精簡的網站導覽。
+  注意：Google 已表示 AI Overviews 不需要也不使用這類檔案，
+  所以它不是 AIO 必備，只是成本很低的加分項（部分 AI 工具可能會讀）。
+-->
+
+## 選購指南
+- [空氣清淨機怎麼選](https://www.example.com/guide/air-purifier-buying-guide): 坪數與 CADR 對照表、3 步驟選購法、實測數據
+
+## 商品
+- [IslandAir A1](https://www.example.com/products/islandair-a1): 4–7 坪，NT$3,990
+- [IslandAir A3](https://www.example.com/products/islandair-a3): 8–12 坪，NT$6,990
+- [IslandAir A5](https://www.example.com/products/islandair-a5): 13–18 坪，NT$10,900
+
+## 政策
+- [退換貨政策](https://www.example.com/policy/returns): 30 天鑑賞期、免費退貨

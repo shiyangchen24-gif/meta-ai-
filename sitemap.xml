@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  【SEO】sitemap：列出所有要被索引的網址
+  【GEO】lastmod 要「真的有改內容才更新」，Google 會比對；亂填會被忽略。
+         價格、庫存變動頻繁的商品頁，正確的 lastmod 能讓新資訊更快被抓到。
+  （Google 會忽略 priority 與 changefreq，所以這裡不寫）
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.example.com/</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.com/category/air-purifier</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.com/products/islandair-a3</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://www.example.com/guide/air-purifier-buying-guide</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+</urlset>

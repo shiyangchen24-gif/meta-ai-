@@ -1,0 +1,41 @@
+# ============================================================
+# robots.txt —— 決定「哪些搜尋引擎 / AI 爬蟲」可以讀你的網站
+# ============================================================
+
+# 【AIO】Google AI Overviews 使用的是一般的 Googlebot。
+# 想出現在 AI 摘要，就「不能」擋 Googlebot。
+User-agent: Googlebot
+Allow: /
+Disallow: /cart
+Disallow: /checkout
+Disallow: /member
+# ↑ 購物車、結帳、會員頁沒有搜尋價值，擋掉可節省爬取預算
+
+# 【AIO】Google-Extended 只控制「內容是否用於 Gemini 等模型的訓練與 grounding」，
+# 它「不會」讓你從 Google 搜尋或 AI Overviews 消失。依品牌政策決定開或關。
+User-agent: Google-Extended
+Allow: /
+
+# 【GEO】其他 AI 搜尋：
+# OAI-SearchBot = ChatGPT 搜尋結果引用；GPTBot = OpenAI 模型訓練（兩者分開控制）
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Perplexity 的搜尋爬蟲
+User-agent: PerplexityBot
+Allow: /
+
+# Bing（Copilot 的搜尋結果也來自 Bing 索引）
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Disallow: /cart
+Disallow: /checkout
+Disallow: /member
+
+# 【SEO】告訴爬蟲 sitemap 在哪
+Sitemap: https://www.example.com/sitemap.xml

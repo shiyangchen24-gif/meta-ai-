@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  商品頁範例：模仿 momo / 蝦皮商城「被 AI 摘要引用」的頁面結構
+  品牌「小島家電」與網域 example.com 皆為虛構，請換成你自己的
+  標記說明：
+    【SEO】技術基礎：讓 Google 能抓、能懂、能排名
+    【AEO】內容組織：讓「問題 → 答案」可以被直接擷取
+    【GEO】AI 能見度：讓 AI 判斷你可信、值得引用
+    【AIO】Google AI Overviews 相關的注意事項
+  ============================================================
+-->
+<html lang="zh-Hant-TW"><!-- 【SEO】語系宣告，Google 判斷要給台灣繁中使用者 -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 【SEO】title = 商品名 + 使用者會搜的規格 + 品牌。momo/蝦皮的標題都塞滿規格詞，就是這個原因 -->
+  <title>IslandAir A3 空氣清淨機｜8–12 坪、CADR 350｜小島家電</title>
+
+  <!-- 【SEO】description 不直接影響排名，但會影響點擊率；寫成「回答」而不是廣告詞 -->
+  <meta name="description" content="IslandAir A3 適用 8–12 坪、CADR 350 m³/h、HEPA H13 濾網，噪音最低 22 dB。售價 NT$6,990，現貨、24 小時到貨、30 天鑑賞期。">
+
+  <!-- 【SEO】canonical：同商品有多個網址（顏色參數、追蹤碼）時，告訴 Google 哪一個是正本，避免權重被分散 -->
+  <link rel="canonical" href="https://www.example.com/products/islandair-a3">
+
+  <!-- 【AIO】Google 的 snippet 控制同樣適用於 AI Overviews。
+       max-snippet:-1 允許擷取較長文字；若設成 nosnippet，等於主動退出 AI 摘要 -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <!-- 【SEO】社群分享卡片（LINE、FB 分享時的預覽） -->
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="IslandAir A3 空氣清淨機｜8–12 坪適用">
+  <meta property="og:description" content="CADR 350、HEPA H13、最低 22 dB，NT$6,990 現貨。">
+  <meta property="og:image" content="https://www.example.com/img/islandair-a3-1200.jpg">
+  <meta property="og:url" content="https://www.example.com/products/islandair-a3">
+
+  <!-- 【SEO】效能：預先連線圖片 CDN，改善 LCP（Core Web Vitals） -->
+  <link rel="preconnect" href="https://img.example.com">
+
+  <!--
+    ============================================================
+    結構化資料 JSON-LD —— 電商被 AI 摘要「帶出價格與連結」的核心
+    重要規則：這裡寫的價格、庫存、評分，必須和頁面上「看得到的內容」一致，
+    否則 Google 會視為誤導標記，可能失去複合式搜尋結果資格。
+    ============================================================
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@comment": "【GEO】Organization：建立品牌實體。sameAs 串起官方社群與其他平台，讓 AI 確認『小島家電』是同一個真實存在的商家",
+        "@type": "Organization",
+        "@id": "https://www.example.com/#org",
+        "name": "小島家電",
+        "alternateName": "IslandHome",
+        "url": "https://www.example.com/",
+        "logo": "https://www.example.com/img/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/islandhome.example",
+          "https://www.instagram.com/islandhome.example"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+886-2-0000-0000",
+          "contactType": "customer service",
+          "areaServed": "TW",
+          "availableLanguage": "zh-Hant"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.example.com/#website",
+        "url": "https://www.example.com/",
+        "name": "小島家電",
+        "publisher": { "@id": "https://www.example.com/#org" }
+      },
+      {
+        "@comment": "【SEO】麵包屑：讓 Google 理解網站階層，搜尋結果顯示路徑而非長網址",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://www.example.com/" },
+          { "@type": "ListItem", "position": 2, "name": "空氣清淨機", "item": "https://www.example.com/category/air-purifier" },
+          { "@type": "ListItem", "position": 3, "name": "IslandAir A3" }
+        ]
+      },
+      {
+        "@comment": "【AIO】Product + Offer：Google 購物圖譜（Shopping Graph）的資料來源之一，AI 摘要裡出現的價格、評分、店家連結多半來自這類資料與 Merchant Center",
+        "@type": "Product",
+        "@id": "https://www.example.com/products/islandair-a3#product",
+        "name": "IslandAir A3 空氣清淨機",
+        "image": [
+          "https://www.example.com/img/islandair-a3-1x1.jpg",
+          "https://www.example.com/img/islandair-a3-4x3.jpg",
+          "https://www.example.com/img/islandair-a3-16x9.jpg"
+        ],
+        "description": "適用 8–12 坪，CADR 350 m³/h，HEPA H13 濾網，最低噪音 22 dB。",
+        "sku": "IA-A3-WH",
+        "gtin13": "4710000000000",
+        "brand": { "@type": "Brand", "name": "IslandAir" },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "適用坪數", "value": "8–12 坪" },
+          { "@type": "PropertyValue", "name": "CADR", "value": "350", "unitText": "m³/h" },
+          { "@type": "PropertyValue", "name": "濾網等級", "value": "HEPA H13" },
+          { "@type": "PropertyValue", "name": "最低噪音", "value": "22", "unitText": "dB" }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.example.com/products/islandair-a3",
+          "priceCurrency": "TWD",
+          "price": "6990",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": { "@id": "https://www.example.com/#org" },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "TWD" },
+            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "TW" },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 1, "unitCode": "DAY" }
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "TW",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "128"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "陳小姐" },
+            "datePublished": "2026-09-14",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "10 坪臥室開睡眠模式幾乎聽不到聲音，PM2.5 半小時內從 35 降到 8。"
+          }
+        ]
+      },
+      {
+        "@comment": "【AEO】FAQPage：Google 自 2023 起只對少數權威網站顯示 FAQ 複合式結果，但標記仍幫助機器把問答對應起來；真正關鍵是下方 HTML 裡真的有這些問答",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "IslandAir A3 適合幾坪？",
+            "acceptedAnswer": { "@type": "Answer", "text": "建議 8–12 坪。CADR 350 m³/h 約可在 12 分鐘內將 10 坪空間的空氣循環一次。" }
+          },
+          {
+            "@type": "Question",
+            "name": "濾網多久換一次？多少錢？",
+            "acceptedAnswer": { "@type": "Answer", "text": "一般家庭約 6–12 個月更換一次，原廠濾網 NT$890。機身會在濾網壽命低於 10% 時亮燈提醒。" }
+          },
+          {
+            "@type": "Question",
+            "name": "晚上開會很吵嗎？",
+            "acceptedAnswer": { "@type": "Answer", "text": "睡眠模式 22 dB，接近翻書聲，一般不影響睡眠。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* 【SEO】內嵌關鍵 CSS，減少阻擋渲染的請求（改善 LCP / CLS） */
+    body{font-family:system-ui,"Noto Sans TC",sans-serif;margin:0;line-height:1.7;color:#222}
+    main{max-width:960px;margin:auto;padding:16px}
+    .answer-box{background:#f3f7ff;border-left:4px solid #3366cc;padding:12px 16px;margin:16px 0}
+    table{border-collapse:collapse;width:100%}
+    th,td{border:1px solid #ddd;padding:8px;text-align:left}
+    .price{font-size:1.6em;color:#d0021b;font-weight:700}
+  </style>
+</head>
+
+<body>
+  <!-- 【SEO】語意化標籤 header/nav/main/footer：讓爬蟲分辨主內容與導覽，AI 擷取時較不會抓到選單雜訊 -->
+  <header>
+    <nav aria-label="主選單">
+      <a href="/">小島家電</a> ·
+      <a href="/category/air-purifier">空氣清淨機</a> ·
+      <a href="/guide/air-purifier-buying-guide">選購指南</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 【SEO】可見的麵包屑，與 JSON-LD 一致 -->
+    <nav aria-label="麵包屑">
+      <a href="/">首頁</a> › <a href="/category/air-purifier">空氣清淨機</a> › IslandAir A3
+    </nav>
+
+    <article>
+      <!-- 【SEO】一頁只有一個 h1，與 title 主題一致 -->
+      <h1>IslandAir A3 空氣清淨機（8–12 坪）</h1>
+
+      <!-- 【AEO】答案先行：第一段就用 2–3 句話回答「這是什麼、適合誰、多少錢」。
+           AI 摘要偏好擷取這種「自成一段、不需上下文」的句子 -->
+      <p class="answer-box">
+        <strong>重點摘要：</strong>IslandAir A3 適合 8–12 坪的臥室或小客廳，
+        CADR 350 m³/h、HEPA H13 濾網可過濾 0.3 微米微粒，睡眠模式僅 22 dB。
+        售價 NT$6,990，現貨免運，隔日到貨。
+      </p>
+
+      <!-- 【SEO】圖片：有意義的 alt、固定寬高（避免版面位移 CLS）、首圖不要 lazy -->
+      <img src="https://img.example.com/islandair-a3-4x3.jpg"
+           alt="IslandAir A3 白色空氣清淨機正面，放在臥室床邊"
+           width="800" height="600" fetchpriority="high">
+
+      <!-- 【AIO】價格與庫存「必須」在頁面上看得到，且與 JSON-LD 相同 -->
+      <section aria-label="購買資訊">
+        <p class="price">NT$6,990</p>
+        <p>✅ 現貨 · 🚚 免運隔日到貨 · ↩️ 30 天鑑賞期免費退貨</p>
+        <button type="button">加入購物車</button>
+      </section>
+
+      <!-- 【AEO】規格用 <table>：表格是 AI 最容易精準抽取數字的格式 -->
+      <section>
+        <h2>規格</h2>
+        <table>
+          <tr><th scope="row">適用坪數</th><td>8–12 坪</td></tr>
+          <tr><th scope="row">CADR</th><td>350 m³/h</td></tr>
+          <tr><th scope="row">濾網</th><td>HEPA H13 + 活性碳</td></tr>
+          <tr><th scope="row">噪音</th><td>22–52 dB</td></tr>
+          <tr><th scope="row">耗電</th><td>最高 45 W</td></tr>
+          <tr><th scope="row">尺寸 / 重量</th><td>27 × 27 × 55 cm / 5.2 kg</td></tr>
+        </table>
+      </section>
+
+      <!-- 【GEO】誠實寫出「不適合誰」：比單純吹捧更容易被 AI 當成客觀資訊引用，也減少退貨 -->
+      <section>
+        <h2>適合誰？不適合誰？</h2>
+        <ul>
+          <li><strong>適合：</strong>10 坪左右臥室、怕吵的淺眠者、有過敏體質的家庭。</li>
+          <li><strong>不適合：</strong>15 坪以上客廳（建議選 CADR 500 以上機種），或需要加濕功能者。</li>
+        </ul>
+      </section>
+
+      <!-- 【AEO】FAQ：h3 寫成使用者真正會搜尋的問句，答案第一句直接回答 -->
+      <section>
+        <h2>常見問題</h2>
+        <h3>IslandAir A3 適合幾坪？</h3>
+        <p>建議 8–12 坪。CADR 350 m³/h 約可在 12 分鐘內將 10 坪空間的空氣循環一次。</p>
+        <h3>濾網多久換一次？多少錢？</h3>
+        <p>一般家庭約 6–12 個月更換一次，原廠濾網 NT$890。機身會在濾網壽命低於 10% 時亮燈提醒。</p>
+        <h3>晚上開會很吵嗎？</h3>
+        <p>睡眠模式 22 dB，接近翻書聲，一般不影響睡眠。</p>
+      </section>
+
+      <!-- 【GEO】真實評價 + 具體數字：AI 在回答「好不好用」時會找第一手使用經驗 -->
+      <section>
+        <h2>買家評價（4.7 / 5，128 則）</h2>
+        <blockquote>
+          「10 坪臥室開睡眠模式幾乎聽不到聲音，PM2.5 半小時內從 35 降到 8。」— 陳小姐，2026-09-14
+        </blockquote>
+        <a href="/products/islandair-a3/reviews">看全部 128 則評價</a>
+      </section>
+
+      <!-- 【GEO】內部連結到指南頁：形成「商品頁 ↔ 知識頁」主題群，提升整站在該主題的權威性 -->
+      <p>還在比較？看 <a href="/guide/air-purifier-buying-guide">空氣清淨機怎麼選：坪數與 CADR 對照表</a>。</p>
+
+      <!-- 【GEO】更新日期：AI 偏好新鮮資訊，價格類頁面尤其重要 -->
+      <p><small>資訊更新：<time datetime="2026-11-03">2026-11-03</time></small></p>
+    </article>
+  </main>
+
+  <footer>
+    <!-- 【GEO】公司資訊、退換貨政策、聯絡方式：E-E-A-T 中的「可信度」訊號 -->
+    <p>小島家電股份有限公司 · 統一編號 00000000 · 客服 02-0000-0000</p>
+    <p><a href="/policy/returns">退換貨政策</a> · <a href="/about">關於我們</a></p>
+  </footer>
+</body>
+</html>
