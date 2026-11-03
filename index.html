@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+  首頁：GitHub Pages 打開資料夾網址時，預設讀取 index.html。
+  沒有這個檔案就會出現 404。
+-->
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 【SEO】首頁 title：品牌 + 主要品類 -->
+  <title>小島家電｜空氣清淨機與選購指南</title>
+  <meta name="description" content="小島家電提供 4–18 坪適用的空氣清淨機，以及坪數、CADR、濾網對照的選購指南。全館免運、30 天鑑賞期。">
+  <!-- 【SEO】canonical 改成你實際的 GitHub Pages 網址 -->
+  <link rel="canonical" href="https://shiyangchen24-gif.github.io/meta-ai-/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <!-- 【GEO】首頁放 Organization + WebSite，建立品牌實體 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://shiyangchen24-gif.github.io/meta-ai-/#org",
+        "name": "小島家電",
+        "url": "https://shiyangchen24-gif.github.io/meta-ai-/"
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://shiyangchen24-gif.github.io/meta-ai-/",
+        "name": "小島家電",
+        "publisher": { "@id": "https://shiyangchen24-gif.github.io/meta-ai-/#org" }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body{font-family:system-ui,"Noto Sans TC",sans-serif;margin:0;line-height:1.7;color:#222}
+    main{max-width:960px;margin:auto;padding:16px}
+    .card{border:1px solid #ddd;border-radius:8px;padding:16px;margin:12px 0}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>小島家電</h1>
+    <!-- 【AEO】首頁第一段直接說明網站是什麼 -->
+    <p>台灣空氣清淨機品牌，提供 4–18 坪適用機種與實測選購指南。全館免運、30 天鑑賞期。</p>
+
+    <!-- 【SEO】首頁連到重要頁面，讓爬蟲從首頁就能找到所有內容。
+         使用相對路徑，因為網站放在 /meta-ai-/ 子資料夾下 -->
+    <div class="card">
+      <h2><a href="guide.html">空氣清淨機怎麼選？坪數、CADR、濾網對照表</a></h2>
+      <p>3 步驟選購法、坪數對照表、實測數據。</p>
+    </div>
+    <div class="card">
+      <h2><a href="product.html">IslandAir A3 空氣清淨機（8–12 坪）</a></h2>
+      <p>CADR 350、HEPA H13、最低 22 dB，NT$6,990。</p>
+    </div>
+  </main>
+</body>
+</html>
